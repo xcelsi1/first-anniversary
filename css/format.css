@@ -4,29 +4,29 @@
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 100%;
+	width: 30%;
 	height: 10%;
 	text-align: center;
 }
 
 #txt1 {
-	font-size: 16px;
+	font-size: 17px;
 	text-align: center;
 	color: white;
 }
 #txt2 {
-	font-size: 16px;
+	font-size: 17px;
 	text-align: center;
 	color: white;
 }
 
 #content{
 	position: absolute;
-	top: 1%;
+	top: 3%;
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 100%;
+	width: 60%;
 	height: 20%;
 }
 
@@ -42,36 +42,36 @@
 }
 
 #d{
-	font-size: 19px;
+	font-size: 20px;
 }
 
 #h{
-	font-size: 19px;
+	font-size: 20px;
 }
 
 #m{
-	font-size: 19px;
+	font-size: 20px;
 }
 
 #s{
-	font-size: 19px;
+	font-size: 20px;
 }
 
 #heartTxt{
 	position: absolute;
 	display: table;
 	vertical-align: middle;
-	top: 80%;
+	top: 82%;
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 10%;
+	width: 8%;
 	height: 8%;
 }
 
 #clickMe{
 	display: inline-block;
-	font-size: 16px;
+	font-size: 17px;
 	width: 100%;
 	text-align: center;
 	color: white;
@@ -90,22 +90,22 @@
 	border: none;
 	outline: none;
 	background-position: center;
-	transition: 0.1s;
+	transition: 0.2s;
 	width: 100%;
 	height: 100%;
 
 }
 
 #button:active {
-	width: 92%;
-	height: 92%;
+	width: 95%;
+	height: 95%;
 }
 
 #imgTxt{
 	position: absolute;
 	display: table;
 	vertical-align: middle;
-	top: 20%;
+	top: 23%;
 	left: 0;
 	right: 0;
 	margin: auto;
@@ -119,7 +119,7 @@
 	right: 0;
 	margin: auto;
 	width: auto;
-	height: 100%;
+	height: 100%
 }
 
 #Txt{
