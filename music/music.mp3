@@ -6,6 +6,6 @@
       <title>Background Music</title>
 </head>
 <body>
-    <audio src="./Realestk-WFM.mp3"></audio>
+    <audio controls="" src="./Realestk-WFM.mp3"></audio>
 </body>
 </html>
