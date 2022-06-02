@@ -19,6 +19,8 @@ function typeWriter(text, para){
 			i = 0;
 		}
 		ok += 1;
+		}
+		ok += 2;
 	}
 }
 
