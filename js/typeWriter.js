@@ -30,8 +30,10 @@ var typeInterval;
 		if(ok == 0){
 			typeWriter(text1, "txt1");
 		}
-		else if(ok == 1){
+		if(ok == 1){
 			typeWriter(text2, "txt2");
 		}
+		else if(ok == 2){
+			typeWriter(text3, "txt3");
 	}, 100);
 //};
