@@ -31,5 +31,6 @@ var typeInterval;
 		}
 		else if(ok == 1){
 			typeWriter(text2, "txt2");
+		}	
 	}, 100);
 //};
