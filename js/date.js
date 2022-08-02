@@ -22,7 +22,7 @@ function timer(){
 	document.getElementById("d").innerHTML = d;
 	document.getElementById("h").innerHTML = h;
 	document.getElementById("m").innerHTML = m;
-	
+	document.getElementById("s").innerHTML = s;
 }
 
 function fadein(){
