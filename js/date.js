@@ -1,51 +1,42 @@
+<script>
 
-var dv = document.getElementById("content");
-dv.style.opacity = 0;
-var val = 0;
+    CountDownTimer('11/01/2021 10:1 AM', 'countdown');
+    CountDownTimer('02/20/2012 10:1 AM', 'newcountdown');
 
-function timer(){
-	var start = new Date(2021, 0, 11, 1, 0);
-	var t = new Date() - start;
-	var d = Math.floor(t / 1000 / 60 / 60 / 24);
-	var h = Math.floor(t / 1000 / 60 / 60 % 24);
-	if(h < 10){
-		h = "0" + h;
-	}
-	var m = Math.floor(t / 1000 / 60 % 60);
-	if(m < 10){
-		m = "0" + m;
-	}
-	var s = Math.floor(t / 1000 % 60);
-	if(s < 10){
-		s = "0" + s;
-	}
-	document.getElementById("d").innerHTML = d;
-	document.getElementById("h").innerHTML = h;
-	document.getElementById("m").innerHTML = m;
-	document.getElementById("s").innerHTML = s;
-}
+    function CountDownTimer(dt, id)
+    {
+        var end = new Date(dt);
 
-function fadein(){
-	if(val < 1){
-		val += 0.025;
-		dv.style.opacity = val;
-	}
-	else{
-		clearInterval(fadeinInterval);
-		if(ok == 2){
-			ok += 1;
-		}
-	}
-}
+        var _second = 1000;
+        var _minute = _second * 60;
+        var _hour = _minute * 60;
+        var _day = _hour * 24;
+        var timer;
 
-var fadeInterval;
-var fadeinInterval;
+        function showRemaining() {
+            var now = new Date();
+            var distance = end - now;
+            if (distance < 0) {
 
-timer();
-setInterval(timer, 1000);
-fadeInterval = setInterval(function(){
-	if(ok == 2){
-		clearInterval(fadeInterval);
-		fadeinInterval = setInterval(fadein, 50);
-	}
-}, 50)
+                clearInterval(timer);
+                document.getElementById(id).innerHTML = 'EXPIRED!';
+
+                return;
+            }
+            var days = Math.floor(distance / _day);
+            var hours = Math.floor((distance % _day) / _hour);
+            var minutes = Math.floor((distance % _hour) / _minute);
+            var seconds = Math.floor((distance % _minute) / _second);
+
+            document.getElementById(id).innerHTML = days + 'days ';
+            document.getElementById(id).innerHTML += hours + 'hrs ';
+            document.getElementById(id).innerHTML += minutes + 'mins ';
+            document.getElementById(id).innerHTML += seconds + 'secs';
+        }
+
+        timer = setInterval(showRemaining, 1000);
+    }
+
+</script>
+<div id="countdown"></div>
+<div id="newcountdown"></div>
