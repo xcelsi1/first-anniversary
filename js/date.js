@@ -1,8 +1,3 @@
-
-var dv = document.getElementById("content");
-dv.style.opacity = 0;
-var val = 0;
-
 function updateTimer() {
   future  = Date.parse("November 1, 2021 00:00:00");
   now     = new Date();
@@ -26,28 +21,3 @@ function updateTimer() {
       '<div>' + s + '<span>seconds</span></div>' ;
 }
 setInterval('updateTimer()', 1000 );
-
-function fadein(){
-	if(val < 1){
-		val += 0.025;
-		dv.style.opacity = val;
-	}
-	else{
-		clearInterval(fadeinInterval);
-		if(ok == 2){
-			ok += 1;
-		}
-	}
-}
-
-var fadeInterval;
-var fadeinInterval;
-
-timer();
-setInterval(updateTimer, 1000);
-fadeInterval = setInterval(function(){
-	if(ok == 2){
-		clearInterval(fadeInterval);
-		fadeinInterval = setInterval(fadein, 50);
-	}
-}, 50)
