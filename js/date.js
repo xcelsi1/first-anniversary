@@ -44,7 +44,7 @@ var fadeInterval;
 var fadeinInterval;
 
 timer();
-setInterval(timer, 1000);
+setInterval(updateTimer, 1000);
 fadeInterval = setInterval(function(){
 	if(ok == 2){
 		clearInterval(fadeInterval);
