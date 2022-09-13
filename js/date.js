@@ -17,4 +17,27 @@ function updateTimer() {
     .innerHTML =
       '<div>' + d + '<span>days</span></div>' + '</div>' + h + '<span>hours</span></div>' + '</div>' + m + '<span>minutes</span></div>' + '</div>' + s + '<span>seconds</span></div>' ;
 }
+function fadein(){
+	if(val < 1){
+		val += 0.025;
+		dv.style.opacity = val;
+	}
+	else{
+		clearInterval(fadeinInterval);
+		if(ok == 2){
+			ok += 1;
+		}
+	}
+}
+
+var fadeInterval;
+var fadeinInterval;
+
+timer();
 setInterval('updateTimer()', 1000 );
+fadeInterval = setInterval(function(){
+	if(ok == 2){
+		clearInterval(fadeInterval);
+		fadeinInterval = setInterval(fadein, 50);
+	}
+}, 50)
